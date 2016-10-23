@@ -19,6 +19,7 @@ Copy the following JARs to the `lib` folder
 * Optionally download soundfount
   - go to http://www.schristiancollins.com/generaluser.php and download the latest version of the soundfont in the Current section of the page (https://dl.dropboxusercontent.com/u/8126161/GeneralUser_GS_1.47.zip)
   - extract zip and copy GeneralUser GS v1.47.sf2 to the folder containing the fat JAR
+
 ## Build
 ```bash
 # Build executable fat JAR
