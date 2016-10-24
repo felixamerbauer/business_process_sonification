@@ -1,5 +1,10 @@
 # Business Process Sonification
 A multimodal tool combining sonification and visualization for ex post process mining and process analysis using XES event logs.
+
+There is also a functionally similar version of the tool that integrates itself as package/plugin in the process mining tool ProM (http://www.promtools.org/).
+
+For more details and instructions how to use the package/plugin for ProM see also the project homepage (http://cs.univie.ac.at/wst/forschung/projekte/projekt/infproj/1063/).
+
 ## Authors
 * Faculty of Computer Science University of Vienna, Austria
   * Felix Amerbauer
