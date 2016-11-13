@@ -48,6 +48,12 @@ case class Settings(
 
       }).toSeq.sorted.mkString("\t", "\n\t", "")
     }
+    def clipboardC(m: Map[Double, Int]): String = {
+      (m.map {
+        case (k, v) => s"$k=$v"
+
+      }).toSeq.mkString("\t", "\n\t", "")
+    }
     def clipboardColor(m: MMap[String, Enabler[java.awt.Color]]): String = {
       (m.map {
         case (k, v) => s"$k=${ColorMapping.get(v.value).getOrElse(v.value)} ${if (v.enabled) "x" else ""}"
@@ -63,8 +69,8 @@ case class Settings(
       case mm: MelodyMapping => s"Melody\n${clipboardE(mm.values)}"
       case dm: DrumMapping => s"Drum Instrument\n${clipboardE(dm.values)}"
       case rm: RhythmMapping => s"Rhythm\n${clipboardE(rm.values)}"
-      case vm: VolumeMapping => s"Volume"
-      case pm: PanningMapping => s"Panning"
+      case vm: VolumeMapping => s"Volume\n${clipboardC(vm.values)}"
+      case pm: PanningMapping => s"Panning\n${clipboardC(pm.values)}"
     }
 
     val mappingClipboard = {

@@ -178,7 +178,7 @@ class Controller(val log: XLog, initialSettings: Settings, val parentFrame: Opti
       f.toFloat
     }
     val passed = fraction * traces.firstStartLastEndTotalDuration._3
-    view.MainSplitPane.left.zoomPositionDuration.currentPosition.setText(calculatePositionString((passed * settings.speed).toInt, None))
+    view.MainSplitPane.left.zoomPositionDuration.currentPosition.setText(calculatePositionString(passed.toLong, None))
     view.MainSplitPane.left.visualizationOverview.repaint()
     view.MainSplitPane.left.visualization.repaint()
   }
