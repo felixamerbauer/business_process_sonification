@@ -34,5 +34,5 @@ sbt assembly
 ## Usage
 ```bash
 cd target/scala-2.11
-java -jar business_process_sonification_2.11-1.0.3.jar
+java -jar business_process_sonification_2.11-1.0.4.jar
 ```
