@@ -115,6 +115,10 @@ class Player(implicit ctrl: Controller) extends BorderPanel(2, 2) with Modifiabl
   // use the desktop as default save location if available
   private val windowsDesktop = Option(System.getProperty("user.home")).map(new File(_, "Desktop")).filter(_.isDirectory())
 
+  class MyCombo(cb: JComboBox[String]) extends JPanel {
+    add(cb)
+  }
+
   // if the application is running in standalone mode 
   val openXes = new JButton
   val loadProject = new JButton
@@ -125,16 +129,13 @@ class Player(implicit ctrl: Controller) extends BorderPanel(2, 2) with Modifiabl
     openXes.setToolTipText("""Open XES file""")
     openXes.addActionListener(new ActionListener() {
       val fc = new JFileChooser()
-      // http://stackoverflow.com/questions/24309517/custom-jfilechooser-how-to-add-jcombobox-into-the-jfilechooser
       val combo = new JComboBox(Array("Normal", "Sequential"))
-      val panel1 = fc.getComponent(3).asInstanceOf[JPanel]
-      val panel2 = panel1.getComponent(3).asInstanceOf[JPanel]
-      panel2.add(combo)
       val xesFilter = new FileNameExtensionFilter("XES files (*.xes)", "xes")
       fc.addChoosableFileFilter(xesFilter)
       fc.setFileFilter(xesFilter)
       fc.setDialogTitle("Open XES file")
       windowsDesktop.foreach(fc.setCurrentDirectory)
+      fc.setAccessory(new MyCombo(combo))
 
       def actionPerformed(e: ActionEvent) {
         //Handle open button action.
