@@ -20,7 +20,7 @@ For more details and instructions how to use the package/plugin for ProM see als
   * **TODO** Widgets
 
 * Other steps
-  * Install JDK 1.7+ (Tested with Oracle JDK)
+  * Install JDK 1.8+ (Tested with Oracle JDK)
   * Install the build tool SBT http://www.scala-sbt.org/download.html
   * Optionally download soundfount
     - go to http://www.schristiancollins.com/generaluser.php and download the latest version of the soundfont in the Current section of the page (https://dl.dropboxusercontent.com/u/8126161/GeneralUser_GS_1.47.zip)
