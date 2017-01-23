@@ -16,8 +16,8 @@ For more details and instructions how to use the package/plugin for ProM see als
   * Open XES 2.15 https://svn.win.tue.nl/trac/prom/export/latest/Releases/OpenXES/OpenXES-20160212.jar
   * JFugue 5.0.7 http://www.jfugue.org/jfugue-5.0.7.jar
   * slickerbox http://code.deckfour.org/slickerbox/slickerbox-1.0rc1.tar.gz (extract TAR)
-  * **TODO** Spex
-  * **TODO** Widgets
+  * Spex (spex.jar Version 1.1 take from http://www.promtools.org/prom6/downloads/prom-6.6-all-platforms.tar.gz)
+  * Widgets (take from http://www.promtools.org/prom6/packages66/Widgets/Widgets-6.6.153-all.zip)
 
 * Other steps
   * Install JDK 1.8+ (Tested with Oracle JDK)
